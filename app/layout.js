@@ -17,8 +17,10 @@ export default function RootLayout({ children }) {
         <div>
           <Navbar />
           <main className="py-20 max-w-[90%] sm:max-w-[80%] mx-auto bg-slate-900 min-h-[calc(100vh-60px)] ">
-            <Providers>{children}</Providers>
-            <SpeedInsights />
+            <Providers>
+              {children}
+              <SpeedInsights />
+            </Providers>
           </main>
         </div>
       </body>
