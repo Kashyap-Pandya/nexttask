@@ -2,7 +2,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Providers from "./Providers";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const roboto = Roboto({ weight: ["400", "700"], subsets: ["latin"] });
 
 export const metadata = {
@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <main className="py-20 max-w-[90%] sm:max-w-[80%] mx-auto bg-slate-900 min-h-[calc(100vh-60px)] ">
             <Providers>{children}</Providers>
+            <SpeedInsights />
           </main>
         </div>
       </body>
